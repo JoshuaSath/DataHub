@@ -28,7 +28,7 @@ public class AfterLogin {
 
     public void userLogOut(ActionEvent event) throws IOException {
         DataAnalyticsHub m = new DataAnalyticsHub();
-        m.changeScene("login.fxml");
+        m.changeScene("logIn.fxml");
     }
 
 

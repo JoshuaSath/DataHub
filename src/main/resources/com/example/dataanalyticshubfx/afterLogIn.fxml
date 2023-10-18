@@ -8,18 +8,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="478.0" text="Dashboard" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataanalyticshubfx.AfterLogin">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="478.0" text="Dashboard" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataanalyticshubfx.AfterLogin">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
-                <TextArea fx:id="writepostArea" layoutX="14.0" layoutY="68.0" prefHeight="99.0" prefWidth="447.0" promptText="Write Post here.." />
-                <Button fx:id="addpostButton" layoutX="14.0" layoutY="208.0" mnemonicParsing="false" text="Add Post" />
-                <Button fx:id="userlogoutButton" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#userLogOut" text="Logout" />
-            <Label layoutX="16.0" layoutY="13.0" text="Welcome, User!" />
-            <Separator layoutX="16.0" layoutY="52.0" prefHeight="0.0" prefWidth="441.0" />
-            </children></AnchorPane>
+                <TextArea fx:id="writepostArea" layoutX="14.0" layoutY="68.0" prefHeight="99.0" prefWidth="447.0"
+                          promptText="Write Post here.."/>
+                <Button fx:id="addpostButton" layoutX="14.0" layoutY="208.0" mnemonicParsing="false" text="Add Post"/>
+                <Button fx:id="userlogoutButton" layoutX="14.0" layoutY="265.0" mnemonicParsing="false"
+                        onAction="#userLogOut" text="Logout"/>
+                <Label layoutX="16.0" layoutY="13.0" text="Welcome, User!"/>
+                <Separator layoutX="16.0" layoutY="52.0" prefHeight="0.0" prefWidth="441.0"/>
+            </children>
+        </AnchorPane>
     </content>
-   <font>
-      <Font name="Arial" size="14.0" />
-   </font>
+    <font>
+        <Font name="Arial" size="14.0"/>
+    </font>
 </TitledPane>

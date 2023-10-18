@@ -32,7 +32,7 @@ public class Register {
 
     private void backOne() throws IOException {
         DataAnalyticsHub m = new DataAnalyticsHub();
-        m.changeScene("login.fxml");
+        m.changeScene("logIn.fxml");
 
     }
 

@@ -6,12 +6,16 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import java.sql.PreparedStatement;
 import java.io.IOException;
+import java.sql.ResultSet;
 
 public class LogIn {
-
     public LogIn() {
-
 
     }
 
@@ -37,7 +41,7 @@ public class LogIn {
         DataAnalyticsHub m = new DataAnalyticsHub();
         if (username.getText().toString().equals("deez") && password.getText().toString().equals("deez")) {
             wrongLogIn.setText("suss");
-            m.changeScene("afterLogin.fxml");
+            m.changeScene("afterLogIn.fxml");
 
 
         } else if (username.getText().isEmpty() && password.getText().isEmpty()) {
@@ -56,6 +60,11 @@ public class LogIn {
     private void registerUser() throws IOException {
         DataAnalyticsHub m = new DataAnalyticsHub();
         m.changeScene("register.fxml");
+        PreparedStatement psInsert = null;
+        PreparedStatement psCheckUserExists = null;
+        ResultSet resultSet = null;
+        SQLConnection connection = null;
+
 
     }
 
