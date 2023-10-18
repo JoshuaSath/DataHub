@@ -7,33 +7,58 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Login page" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataanalyticshubfx.LogIn">
-   <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                <children>
-                    <PasswordField fx:id="password" layoutX="13.0" layoutY="115.0" promptText="Write here">
-                        <font>
-                            <Font size="10.0" />
-                        </font>
-                    </PasswordField>
-                    <Label fx:id="usernameLabel" layoutX="14.0" layoutY="14.0" text="Username" />
-                    <Label fx:id="passwordLabel" layoutX="14.0" layoutY="88.0" text="Password" />
-                    <Separator layoutX="197.0" layoutY="3.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="9.0" />
-                    <TextField fx:id="username" layoutX="14.0" layoutY="43.0" onAction="#userLogIn" promptText="Write here">
-                        <font>
-                            <Font size="10.0" />
-                        </font>
-                    </TextField>
-                    <Button fx:id="loginButton" layoutX="51.0" layoutY="194.0" mnemonicParsing="false" onAction="#userLogIn" text="Log in" />
-            <Text fx:id="wrongLogIn" layoutX="12.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="128.13672256469727" />
-            <Button fx:id="registerButton" layoutX="343.0" layoutY="92.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="45.0" prefWidth="95.0" text="Register" />
-                </children>
-            </AnchorPane>
-   </content>
-   <font>
-      <Font name="Arial" size="14.0" />
-   </font>
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" text="Login page" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataanalyticshubfx.LogIn">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <PasswordField fx:id="password" layoutX="328.0" layoutY="129.0" prefHeight="29.0" prefWidth="142.0"
+                               promptText="Password">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </PasswordField>
+                <Separator layoutX="560.0" layoutY="26.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="9.0"/>
+                <TextField fx:id="username" layoutX="328.0" layoutY="67.0" prefHeight="30.0" prefWidth="143.0"
+                           promptText="UserName">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                </TextField>
+                <Button fx:id="loginButton" layoutX="408.0" layoutY="193.0" mnemonicParsing="false"
+                        onAction="#userLogIn" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #989ea3;"
+                        text="Log in" textFill="#07def2">
+                    <font>
+                        <Font name="Calibri Bold" size="14.0"/>
+                    </font>
+                </Button>
+                <Text fx:id="wrongLogIn" layoutX="12.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      wrappingWidth="128.13672256469727"/>
+                <Button fx:id="registerButton" layoutX="328.0" layoutY="301.0" mnemonicParsing="false"
+                        onAction="#registerButton" prefHeight="45.0" prefWidth="208.0"
+                        text="Register here to Create an account!"/>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989ea3" height="377.0" layoutX="-2.0" layoutY="-2.0"
+                           stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="293.0"/>
+                <Label layoutX="328.0" layoutY="12.0" text="Log In">
+                    <font>
+                        <Font name="Calibri" size="24.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="47.0" layoutY="125.0" text="DATA ANALYTICS&#10;HUB" textAlignment="CENTER"
+                       textFill="#07def2">
+                    <font>
+                        <Font name="Calibri Bold" size="26.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </content>
+    <font>
+        <Font name="Arial" size="14.0"/>
+    </font>
 </TitledPane>
