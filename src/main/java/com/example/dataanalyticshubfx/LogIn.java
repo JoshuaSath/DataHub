@@ -1,11 +1,13 @@
 package com.example.dataanalyticshubfx;
 
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
-
+import com.example.dataanalyticshubfx.DBOperations;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,58 +16,50 @@ import java.sql.PreparedStatement;
 import java.io.IOException;
 import java.sql.ResultSet;
 
-public class LogIn {
-    public LogIn() {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    }
-
-    @FXML
-    private TextField username;
-    @FXML
-    private Text wrongLogIn;
+public class LogIn implements Initializable {
 
     @FXML
-    private PasswordField password;
+    private TextField usernameTEXT;
 
     @FXML
-    private Button loginButton;
+    private TextField passwordFIELD;
 
     @FXML
-    private Button registerButton;
+    private Button loginBUTTON;
 
-    public void userLogIn(ActionEvent event) throws IOException {
-        checkLogin();
-    }
+    @FXML
+    private Button registerBUTTON;
 
-    private void checkLogin() throws IOException {
-        DataAnalyticsHub m = new DataAnalyticsHub();
-        if (username.getText().toString().equals("deez") && password.getText().toString().equals("deez")) {
-            wrongLogIn.setText("suss");
-            m.changeScene("afterLogIn.fxml");
+    @FXML
+    private Text wrongLogInTEXT;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
-        } else if (username.getText().isEmpty() && password.getText().isEmpty()) {
-            wrongLogIn.setText("Please enter your data.");
+            loginBUTTON.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    boolean success = DBOperations.logInUser(event, usernameTEXT.getText(), passwordFIELD.getText());
+                    if (success) {
+                        DBOperations.changeScene(event, "afterLogIn.fxml", usernameTEXT.getText());
+                    } else {
+                        wrongLogInTEXT.setVisible(true);
 
-        } else {
-            wrongLogIn.setText("Incorrect username or password!");
+                    }
+                }
+            });
+
+            registerBUTTON.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    DBOperations.changeScene(event, "register.fxml", null);
+                }
+            });
+
 
         }
-    }
-
-    public void registerButton(ActionEvent event) throws IOException {
-        registerUser();
-    }
-
-    private void registerUser() throws IOException {
-        DataAnalyticsHub m = new DataAnalyticsHub();
-        m.changeScene("register.fxml");
-        PreparedStatement psInsert = null;
-        PreparedStatement psCheckUserExists = null;
-        ResultSet resultSet = null;
-        SQLConnection connection = null;
-
 
     }
-
-}
