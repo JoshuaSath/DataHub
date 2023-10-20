@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class AfterLogin implements Initializable {
 
     @FXML
-    private Button sortpost;
+    private Button sortpostBUTTON;
 
     @FXML
     private Button removepostBUTTON;
@@ -68,5 +68,7 @@ public class AfterLogin implements Initializable {
     public void retrievePostBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "retrievePost.fxml", null);
     }
-
+    public void sortPostBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "sortPosts.fxml", null);
+    }
 }

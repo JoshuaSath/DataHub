@@ -26,7 +26,7 @@
                 </Label>
                 <Button fx:id="editprofileBUTTON" layoutX="79.0" layoutY="131.0" mnemonicParsing="false" onAction="#editprofileBUTTON" prefHeight="27.0" prefWidth="90.0" text="Edit Profile" />
                 <Button fx:id="removepostBUTTON" layoutX="463.0" layoutY="131.0" mnemonicParsing="false" onAction="#removePostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Remove Post" />
-                <Button fx:id="sortpost" layoutX="256.0" layoutY="131.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" text="Sort Post" />
+                <Button fx:id="sortpost" layoutX="256.0" layoutY="131.0" mnemonicParsing="false" onAction="#sortPostBUTTON" prefHeight="27.0" prefWidth="90.0" text="Sort Post" />
                 <Button fx:id="retrievepost" layoutX="463.0" layoutY="217.0" mnemonicParsing="false" onAction="#retrievePostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Retrieve Post" />
             </children>
         </AnchorPane>

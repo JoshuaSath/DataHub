@@ -36,7 +36,7 @@
                         <Font name="Calibri Bold" size="26.0" />
                     </font>
                 </Label>
-                <TextField fx:id="passwordFIELD" layoutX="328.0" layoutY="123.0" promptText="Password" />
+                <TextField fx:id="passwordFIELD" layoutX="331.0" layoutY="126.0" prefHeight="24.0" prefWidth="141.0" promptText="Password" />
             </children>
         </AnchorPane>
     </content>

@@ -27,12 +27,12 @@
                     </font>
                 </Label>
                 <Separator layoutX="269.0" layoutY="70.0" orientation="VERTICAL" prefHeight="289.0" prefWidth="0.0" />
-                <Button fx:id="backBUTTON" layoutX="16.0" layoutY="333.0" mnemonicParsing="false" style="-fx-background-color: #d754ff;" text="Back" textFill="#fdfdfd">
+                <Button fx:id="backBUTTON" layoutX="16.0" layoutY="333.0" mnemonicParsing="false" onAction="#backBUTTON" style="-fx-background-color: #d754ff;" text="Back" textFill="#fdfdfd">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Button>
-                <Button fx:id="enterBUTTON" layoutX="105.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: #d754ff;" text="Enter" textFill="#fdfdfd">
+                <Button fx:id="enterBUTTON" layoutX="105.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleEnterButton" style="-fx-background-color: #d754ff;" text="Enter" textFill="#fdfdfd">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
