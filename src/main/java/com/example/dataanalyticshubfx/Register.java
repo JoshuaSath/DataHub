@@ -29,7 +29,7 @@ public class Register implements Initializable {
     private TextField IdTEXT;
 
     @FXML
-    private Button back;
+    private Button backBUTTON;
 
     @FXML
     private Label reguser;
@@ -44,7 +44,7 @@ public class Register implements Initializable {
             public void handle(ActionEvent event) {
                 if (!IdTEXT.getText().trim().isEmpty() || !usernameTEXT.getText().trim().isEmpty() || !passwordFIELD.getText().trim().isEmpty() || (firstnameTEXT.getText().trim().isEmpty() || lastnameTEXT.getText().trim().isEmpty())) {
                     DBOperations.registerUser(event, IdTEXT.getText(), usernameTEXT.getText(), passwordFIELD.getText(), firstnameTEXT.getText(), lastnameTEXT.getText());
-
+                    reguser.setText("Successful creation!");
                 } else {
                     System.out.println("fill in all nfo");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -58,13 +58,8 @@ public class Register implements Initializable {
 
     }
 
-    public void userLogIn(ActionEvent event) throws IOException {
-        backOne();
-    }
-
-    private void backOne() throws IOException {
-        DataAnalyticsHub m = new DataAnalyticsHub();
-
+    public void backBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "logIn.fxml", null);
     }
 
 }

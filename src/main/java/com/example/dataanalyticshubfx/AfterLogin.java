@@ -22,10 +22,10 @@ public class AfterLogin implements Initializable {
     private Button removepost;
 
     @FXML
-    private Button editprofile;
+    private Button editprofileBUTTON;
 
     @FXML
-    private Button addpost;
+    private Button addPostBUTTON;
 
     @FXML
     private Button userLogOut;
@@ -50,24 +50,15 @@ public class AfterLogin implements Initializable {
     }
 
     public void setUserInfo(String UserName) {
-        welcomeLABEL.setText("Welcome" + UserName + "!");
+        welcomeLABEL.setText("Welcome" + " " + UserName + " !");
     }
 
-    // public void userLogOut(ActionEvent event) throws IOException {
-    //     DataAnalyticsHub m = new DataAnalyticsHub();
-    // m.changeScene("logIn.fxml");
-    //  }
 
-
-    public void editprofile(ActionEvent event) throws IOException {
-        editProfileButton();
+    public void editprofileBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "editProfile.fxml", null);
     }
-
-    private void editProfileButton() throws IOException {
-        DataAnalyticsHub m = new DataAnalyticsHub();
-        //m.changeScene("editProfile.fxml");
-
+    public void addPostBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "addPost.fxml", null);
     }
-
 
 }

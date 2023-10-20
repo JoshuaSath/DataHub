@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 import com.example.dataanalyticshubfx.DBOperations;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -31,7 +32,7 @@ public class LogIn implements Initializable {
     private Button loginBUTTON;
 
     @FXML
-    private Button registerBUTTON;
+    private Button register;
 
     @FXML
     private Text wrongLogInTEXT;
@@ -39,27 +40,24 @@ public class LogIn implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-            loginBUTTON.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    boolean success = DBOperations.logInUser(event, usernameTEXT.getText(), passwordFIELD.getText());
-                    if (success) {
-                        DBOperations.changeScene(event, "afterLogIn.fxml", usernameTEXT.getText());
-                    } else {
-                        wrongLogInTEXT.setVisible(true);
+        loginBUTTON.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                boolean success = DBOperations.logInUser(event, usernameTEXT.getText(), passwordFIELD.getText());
+                if (success) {
+                    DBOperations.changeScene(event, "afterLogIn.fxml", usernameTEXT.getText());
+                } else {
+                    wrongLogInTEXT.setVisible(true);
 
-                    }
                 }
-            });
+            }
+        });
 
-            registerBUTTON.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    DBOperations.changeScene(event, "register.fxml", null);
-                }
-            });
-
-
-        }
 
     }
+
+    @FXML
+    private void register(ActionEvent event) {
+        DBOperations.changeScene(event, "register.fxml", null);
+    }
+}

@@ -15,11 +15,12 @@
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d754ff" height="60.0" layoutX="-3.0" layoutY="-1.0"
                            stroke="WHITE" strokeType="INSIDE" width="607.0"/>
-                <Button fx:id="addpost" layoutX="257.0" layoutY="217.0" mnemonicParsing="false" prefHeight="27.0"
-                        prefWidth="89.0" text="Add Post"/>
+                <Button fx:id="addpost" layoutX="257.0" layoutY="217.0" mnemonicParsing="false"
+                        onAction="#addPostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Add Post"/>
                 <Button fx:id="userLogOut" layoutX="391.0" layoutY="338.0" mnemonicParsing="false" prefHeight="27.0"
                         prefWidth="57.0" text="Logout"/>
-                <Label fx:id="welcomeLABEL" layoutX="230.0" layoutY="69.0" textAlignment="CENTER">
+                <Label fx:id="welcomeLABEL" layoutX="215.0" layoutY="73.0" prefHeight="18.0" prefWidth="195.0"
+                       textAlignment="CENTER">
                     <font>
                         <Font name="Calibri Bold" size="16.0"/>
                     </font>
@@ -30,8 +31,8 @@
                         <Font name="Calibri Bold" size="26.0"/>
                     </font>
                 </Label>
-                <Button fx:id="editprofile" layoutX="79.0" layoutY="131.0" mnemonicParsing="false"
-                        onAction="#editprofile" prefHeight="27.0" prefWidth="90.0" text="Edit Profile"/>
+                <Button fx:id="editprofileBUTTON" layoutX="79.0" layoutY="131.0" mnemonicParsing="false"
+                        onAction="#editprofileBUTTON" prefHeight="27.0" prefWidth="90.0" text="Edit Profile"/>
                 <Button fx:id="removepost" layoutX="463.0" layoutY="131.0" mnemonicParsing="false" prefHeight="27.0"
                         prefWidth="89.0" text="Remove Post"/>
                 <Button fx:id="sortpost" layoutX="256.0" layoutY="131.0" mnemonicParsing="false" prefHeight="27.0"

@@ -113,7 +113,7 @@ public class DBOperations {
                 } else {
                     System.out.println("Password not mtach");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("did not mtach");
+                    alert.setContentText("Password did not match");
                     alert.show();
                 }
 

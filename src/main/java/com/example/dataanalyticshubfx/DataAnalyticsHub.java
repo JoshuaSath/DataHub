@@ -13,14 +13,13 @@ import java.sql.DriverManager;
 
 public class DataAnalyticsHub extends Application {
 
-    //private static Stage stg;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         //stg = primaryStage;
-        DataBaseTable.createNewTable();
+        DatabaseTable.createNewTable();
         primaryStage.setResizable(false);
-       Parent root = FXMLLoader.load(getClass().getResource("logIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("logIn.fxml"));
         primaryStage.setTitle("DataAnalyticsHub");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();

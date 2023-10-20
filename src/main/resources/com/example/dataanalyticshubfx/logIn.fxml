@@ -24,7 +24,7 @@
                         <Font name="Calibri Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="registerBUTTON" layoutX="323.0" layoutY="302.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="208.0" style="-fx-background-color: #d754ff;" text="Register here to Create an account!" textFill="#fdfdfd" />
+                <Button fx:id="register" layoutX="323.0" layoutY="302.0" mnemonicParsing="false" onAction="#register" prefHeight="45.0" prefWidth="208.0" style="-fx-background-color: #d754ff;" text="Register here to Create an account!" textFill="#fdfdfd" />
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d754ff" height="377.0" layoutX="-2.0" layoutY="-2.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="307.0" />
                 <Label layoutX="323.0" layoutY="14.0" text="Log In">
                     <font>
