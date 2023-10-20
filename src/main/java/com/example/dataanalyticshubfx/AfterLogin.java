@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -19,7 +18,7 @@ public class AfterLogin implements Initializable {
     private Button sortpost;
 
     @FXML
-    private Button removepost;
+    private Button removepostBUTTON;
 
     @FXML
     private Button editprofileBUTTON;
@@ -31,7 +30,7 @@ public class AfterLogin implements Initializable {
     private Button userLogOut;
 
     @FXML
-    private Button retrievepost;
+    private Button retrievepostBUTTON;
 
     @FXML
     private Label welcomeLABEL;
@@ -61,4 +60,7 @@ public class AfterLogin implements Initializable {
         DBOperations.changeScene(event, "addPost.fxml", null);
     }
 
+    public void removePostBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "removePost.fxml", null);
+    }
 }
