@@ -12,9 +12,12 @@
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d754ff" height="60.0" layoutX="-3.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" width="607.0" />
-                <Button fx:id="addpost" layoutX="257.0" layoutY="217.0" mnemonicParsing="false" onAction="#addPostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Add Post" />
-                <Button fx:id="userLogOut" layoutX="391.0" layoutY="338.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="57.0" text="Logout" />
-                <Label fx:id="welcomeLABEL" layoutX="215.0" layoutY="73.0" prefHeight="18.0" prefWidth="195.0" textAlignment="CENTER">
+                <Button fx:id="addpost" layoutX="257.0" layoutY="217.0" mnemonicParsing="false" onAction="#addPostBUTTON" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: #d754ff;" text="Add Post" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="userLogOut" layoutX="391.0" layoutY="338.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="57.0" style="-fx-background-color: #d754ff;" text="Logout" textFill="#fdfdfd" />
+                <Label fx:id="welcomeLABEL" layoutX="215.0" layoutY="73.0" prefHeight="18.0" prefWidth="240.0" textAlignment="CENTER">
                     <font>
                         <Font name="Calibri Bold" size="16.0" />
                     </font>
@@ -24,10 +27,27 @@
                         <Font name="Calibri Bold" size="26.0" />
                     </font>
                 </Label>
-                <Button fx:id="editprofileBUTTON" layoutX="79.0" layoutY="131.0" mnemonicParsing="false" onAction="#editprofileBUTTON" prefHeight="27.0" prefWidth="90.0" text="Edit Profile" />
-                <Button fx:id="removepostBUTTON" layoutX="463.0" layoutY="131.0" mnemonicParsing="false" onAction="#removePostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Remove Post" />
-                <Button fx:id="sortpost" layoutX="256.0" layoutY="131.0" mnemonicParsing="false" onAction="#sortPostBUTTON" prefHeight="27.0" prefWidth="90.0" text="Sort Post" />
-                <Button fx:id="retrievepost" layoutX="463.0" layoutY="217.0" mnemonicParsing="false" onAction="#retrievePostBUTTON" prefHeight="27.0" prefWidth="89.0" text="Retrieve Post" />
+                <Button fx:id="editprofileBUTTON" layoutX="79.0" layoutY="131.0" mnemonicParsing="false" onAction="#editprofileBUTTON" prefHeight="27.0" prefWidth="90.0" style="-fx-background-color: #d754ff;" text="Edit Profile" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="removepostBUTTON" layoutX="455.0" layoutY="131.0" mnemonicParsing="false" onAction="#removePostBUTTON" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #d754ff;" text="Remove Post" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="sortpost" layoutX="256.0" layoutY="131.0" mnemonicParsing="false" onAction="#sortPostBUTTON" prefHeight="27.0" prefWidth="90.0" style="-fx-background-color: #d754ff;" text="Sort Post" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Button fx:id="retrievepost" layoutX="456.0" layoutY="217.0" mnemonicParsing="false" onAction="#retrievePostBUTTON" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #d754ff;" text="Retrieve Post" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="exportPostBUTTON" layoutX="85.0" layoutY="217.0" mnemonicParsing="false" onAction="#exportPostBUTTON" style="-fx-background-color: #d754ff;" text="Export Post" textFill="#fdfdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </content>

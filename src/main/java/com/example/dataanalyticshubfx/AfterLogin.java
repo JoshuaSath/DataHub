@@ -30,6 +30,9 @@ public class AfterLogin implements Initializable {
     private Button userLogOut;
 
     @FXML
+    private Button exportPostBUTTON;
+
+    @FXML
     private Button retrievepostBUTTON;
 
     @FXML
@@ -68,7 +71,12 @@ public class AfterLogin implements Initializable {
     public void retrievePostBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "retrievePost.fxml", null);
     }
+
     public void sortPostBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "sortPosts.fxml", null);
+    }
+
+    public void exportPostBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "exportPost.fxml", null);
     }
 }
