@@ -40,6 +40,9 @@ public class AddPost {
     private Label statusText;
 
     @FXML
+    private Button backBUTTON;
+
+    @FXML
     private void addPost() {
         ActionEvent event = null;
         // Get the post data from the input fields
@@ -110,5 +113,9 @@ public class AddPost {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void backBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "afterLogIn.fxml", null);
     }
 }

@@ -56,6 +56,7 @@ public class AfterLogin implements Initializable {
     public void editprofileBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "editProfile.fxml", null);
     }
+
     public void addPostBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "addPost.fxml", null);
     }
@@ -63,4 +64,9 @@ public class AfterLogin implements Initializable {
     public void removePostBUTTON(ActionEvent event) throws IOException {
         DBOperations.changeScene(event, "removePost.fxml", null);
     }
+
+    public void retrievePostBUTTON(ActionEvent event) throws IOException {
+        DBOperations.changeScene(event, "retrievePost.fxml", null);
+    }
+
 }
